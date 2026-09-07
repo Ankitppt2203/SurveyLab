@@ -13,15 +13,13 @@ export function Header({ state, dispatch, activeTab, onTabChange, onOpenPreview 
     <header className="sticky top-0 z-20 flex h-[56px] items-center justify-between gap-2 border-b border-[var(--border-default)] bg-white/90 px-3 backdrop-blur-md sm:h-[60px] sm:gap-3 sm:px-5">
       {/* Brand */}
       <div className="flex min-w-0 items-center gap-2 sm:gap-2.5">
-        <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-[var(--accent)] shadow-[var(--shadow-sm)]">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-            <path d="M6 6h8a4 4 0 0 1 0 8H6" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" />
-            <path d="M6 14h10a4 4 0 0 1 0 8H6" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" opacity="0.8" />
-            <circle cx="18" cy="6" r="2" fill="#fff" />
-          </svg>
-        </div>
+        <img
+          src="/CSATlogo.png"
+          alt="CSAT Survey"
+          className="h-8 w-8 flex-shrink-0 rounded-lg object-cover shadow-[var(--shadow-sm)]"
+        />
         <div className="flex min-w-0 items-baseline gap-1.5">
-          <span className="truncate text-[14px] font-semibold tracking-tight text-[var(--text-primary)] sm:text-[15px]">Survey Lab</span>
+          <span className="truncate text-[14px] font-semibold tracking-tight text-[var(--text-primary)] sm:text-[15px]">CSAT</span>
         </div>
         <div className="mx-1 hidden h-5 w-px bg-[var(--border-default)] sm:mx-2 md:flex" />
         <input

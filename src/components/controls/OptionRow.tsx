@@ -27,15 +27,15 @@ export function OptionRow({ index, value, onChange, onDelete, canDelete, accentC
         onClick={onDelete}
         disabled={!canDelete}
         className={cn(
-          'flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-md border border-transparent text-[var(--text-tertiary)] transition-all',
+          'flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-md border border-transparent text-[var(--danger)] transition-all',
           canDelete
-            ? 'hover:border-[var(--border-default)] hover:bg-[var(--bg-hover)] hover:text-[var(--danger)]'
+            ? 'hover:border-[var(--border-default)] hover:bg-[var(--bg-hover)] hover:text-red-600'
             : 'cursor-not-allowed opacity-30',
         )}
         aria-label="Delete option"
         title={canDelete ? 'Remove option' : 'At least 2 options are required'}
       >
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+        <svg width="16" height="16" viewBox="0 0 14 14" fill="none">
           <path d="M3.5 5h7M5.5 5V3.5h3V5M4.5 5l.5 6h4l.5-6" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </button>

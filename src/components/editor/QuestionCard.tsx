@@ -50,18 +50,20 @@ export function QuestionCard({
           <span className="hidden text-[11.5px] text-[var(--text-tertiary)] tabular-nums sm:inline">
             {question.options.length} option{question.options.length !== 1 ? 's' : ''}
           </span>
-          <button
-            type="button"
-            onClick={onDeleteQuestion}
-            disabled={total <= 1}
-            className="flex h-7 w-7 items-center justify-center rounded-md text-[var(--text-tertiary)] transition-colors hover:bg-[var(--bg-hover)] hover:text-[var(--danger)] disabled:cursor-not-allowed disabled:opacity-30"
-            aria-label="Delete question"
-            title={total <= 1 ? 'At least one question is required' : 'Delete question'}
-          >
-            <svg width="13" height="13" viewBox="0 0 14 14" fill="none">
-              <path d="M3.5 5h7M5.5 5V3.5h3V5M4.5 5l.5 6h4l.5-6" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </button>
+          {index > 0 && (
+            <button
+              type="button"
+              onClick={onDeleteQuestion}
+              disabled={total <= 1}
+              className="flex h-7 w-7 items-center justify-center rounded-md text-[var(--danger)] transition-colors hover:bg-[var(--bg-hover)] hover:text-red-600 disabled:cursor-not-allowed disabled:opacity-30"
+              aria-label="Delete question"
+              title={total <= 1 ? 'At least one question is required' : 'Delete question'}
+            >
+              <svg width="16" height="16" viewBox="0 0 14 14" fill="none">
+                <path d="M3.5 5h7M5.5 5V3.5h3V5M4.5 5l.5 6h4l.5-6" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
+          )}
           <span
             className={cn(
               'flex h-7 w-7 items-center justify-center rounded-md text-[var(--text-tertiary)] transition-all',

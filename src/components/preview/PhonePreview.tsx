@@ -7,6 +7,8 @@ import type {
 } from '../../types';
 import { fontFamilyToCss, hexToRgba, cn } from '../../lib/utils';
 
+const THANK_YOU_BACKGROUND = '#87CEEB';
+
 interface PhonePreviewProps {
   state: EditorState;
   compact?: boolean;
@@ -32,6 +34,9 @@ export function PhonePreview({ state, compact = false }: PhonePreviewProps) {
   const padding = state.styling.pagePadding;
 
   const accentSoft = hexToRgba(accent, 0.1);
+  const previewBackground = screen.type === 'thankyou'
+    ? THANK_YOU_BACKGROUND
+    : state.styling.appearance.backgroundColor;
 
   const goNext = () => {
     if (screen.type !== 'question') return;
@@ -94,7 +99,7 @@ export function PhonePreview({ state, compact = false }: PhonePreviewProps) {
         <div
           className="phone-screen"
           style={{
-            background: state.styling.appearance.backgroundColor,
+            background: previewBackground,
             color: '#0F172A',
             fontFamily,
             fontSize: `${state.styling.fontSize}px`,
@@ -103,7 +108,7 @@ export function PhonePreview({ state, compact = false }: PhonePreviewProps) {
         >
           <div
             className="phone-status"
-            style={{ color: isDarkBg(state.styling.appearance.backgroundColor) ? '#F1F5F9' : '#0F172A' }}
+            style={{ color: isDarkBg(previewBackground) ? '#F1F5F9' : '#0F172A' }}
           >
             <span>9:41</span>
             <div className="flex items-center gap-1">
@@ -202,7 +207,8 @@ function PreviewHeader({
   onBack: () => void;
   canGoBack: boolean;
 }) {
-  const isDark = isDarkBg(state.styling.appearance.backgroundColor);
+  const background = screenType === 'thankyou' ? THANK_YOU_BACKGROUND : state.styling.appearance.backgroundColor;
+  const isDark = isDarkBg(background);
   const headerColor = isDark ? '#F1F5F9' : '#0F172A';
   const mutedColor = isDark ? 'rgba(241,245,249,0.6)' : 'rgba(15,23,42,0.55)';
 
@@ -211,7 +217,7 @@ function PreviewHeader({
       className="flex flex-shrink-0 items-center justify-between border-b px-4 pb-3 pt-2"
       style={{
         borderColor: isDark ? 'rgba(255,255,255,0.08)' : 'rgba(15,23,42,0.06)',
-        background: state.styling.appearance.backgroundColor,
+        background,
       }}
     >
       <div className="flex items-center gap-2">
@@ -334,8 +340,8 @@ function PreviewFooter({
   isFinal: boolean;
   onRestart: () => void;
 }) {
-  const isDark = isDarkBg(state.styling.appearance.backgroundColor);
-  const footerBg = state.styling.appearance.backgroundColor;
+  const footerBg = screen.type === 'thankyou' ? THANK_YOU_BACKGROUND : state.styling.appearance.backgroundColor;
+  const isDark = isDarkBg(footerBg);
   const borderColor = isDark ? 'rgba(255,255,255,0.08)' : 'rgba(15,23,42,0.06)';
   const cta = state.styling.ctaStyle;
 

@@ -1,6 +1,6 @@
-# Survey Lab 🧪
+# CSAT 🧪
 
-Survey Lab is a modern, interactive **Survey Campaign Builder** built with React and TypeScript. It allows users to create and customize survey questions, configure options, adjust the visual appearance, and see all changes instantly through a live mobile preview.
+CSAT is a modern, interactive **Survey Campaign Builder** built with React and TypeScript. It allows users to create and customize survey questions, configure options, adjust the visual appearance, and see all changes instantly through a live mobile preview.
 
 The project focuses on creating a clean and user-friendly survey-building experience while demonstrating important frontend concepts such as **React component architecture, shared state management, dynamic forms, reusable components, and real-time UI synchronization**.
 
@@ -10,33 +10,33 @@ The project focuses on creating a clean and user-friendly survey-building experi
 
 Create and manage survey questions dynamically.
 
-* Add multiple survey questions
-* Dynamically increase or decrease the number of questions
-* Edit question titles and descriptions
-* Add and remove answer options
-* Maintain a minimum of two options per question
-* Configure the CTA/submit button text
-* Enable or disable additional comments
-* Configure simple conditional logic
-* Easily navigate between multiple questions
+- Add multiple survey questions
+- Dynamically increase or decrease the number of questions
+- Edit question titles and descriptions
+- Add and remove answer options
+- Maintain a minimum of two options per question
+- Configure the CTA/submit button text
+- Enable or disable additional comments
+- Configure simple conditional logic
+- Easily navigate between multiple questions
 
 ### 🎨 Survey Styling
 
 Customize the appearance of your survey without writing any code.
 
-* Background and backdrop colors
-* Border radius controls
-* Question title styling
-* Subtitle styling
-* Font family, size, weight, and style
-* Text alignment
-* Option list layouts
-* Selected and unselected option styling
-* Additional comment field styling
-* CTA button styling
-* Cross/close button customization
-* Thank-you page styling
-* Individual spacing and margin controls
+- Background and backdrop colors
+- Border radius controls
+- Question title styling
+- Subtitle styling
+- Font family, size, weight, and style
+- Text alignment
+- Option list layouts
+- Selected and unselected option styling
+- Additional comment field styling
+- CTA button styling
+- Cross/close button customization
+- Thank-you page styling
+- Individual spacing and margin controls
 
 ### 📱 Live Mobile Preview
 
@@ -44,28 +44,28 @@ The application includes a realistic mobile survey preview that updates automati
 
 The preview supports:
 
-* Dynamic questions
-* Dynamic answer options
-* Selected options
-* Additional comments
-* CTA buttons
-* Cross/close button
-* Thank-you page
-* Uploaded media
-* Custom styling
+- Dynamic questions
+- Dynamic answer options
+- Selected options
+- Additional comments
+- CTA buttons
+- Cross/close button
+- Thank-you page
+- Uploaded media
+- Custom styling
 
 There is **no Save or Refresh button required**. Changes made in the editor are reflected immediately in the preview.
 
 ## 🛠️ Tech Stack
 
-Survey Lab is built using modern frontend technologies:
+CSAT is built using modern frontend technologies:
 
-* **React** – UI development and component-based architecture
-* **TypeScript** – Type safety and maintainable code
-* **Vite** – Fast development environment and build tooling
-* **CSS / Tailwind CSS** – Styling and responsive UI
-* **React State Management** – Managing survey content and styling state
-* **Git & GitHub** – Version control and source code management
+- **React** – UI development and component-based architecture
+- **TypeScript** – Type safety and maintainable code
+- **Vite** – Fast development environment and build tooling
+- **CSS / Tailwind CSS** – Styling and responsive UI
+- **React State Management** – Managing survey content and styling state
+- **Git & GitHub** – Version control and source code management
 
 ## 📂 Project Structure
 
@@ -104,7 +104,7 @@ survey-lab/
 
 ## 🚀 Getting Started
 
-Follow these steps to run Survey Lab locally.
+Follow these steps to run CSAT locally.
 
 ### 1. Clone the repository
 
@@ -154,18 +154,18 @@ npm run preview
 
 ## 🧠 How It Works
 
-Survey Lab is designed around a shared application state.
+CSAT is designed around a shared application state.
 
 The survey configuration contains information such as:
 
-* Questions
-* Question titles
-* Descriptions
-* Options
-* Comments settings
-* CTA text
-* Conditional logic
-* Thank-you page configuration
+- Questions
+- Question titles
+- Descriptions
+- Options
+- Comments settings
+- CTA text
+- Conditional logic
+- Thank-you page configuration
 
 A separate styling state controls the visual appearance of the survey.
 
@@ -187,22 +187,22 @@ This approach allows the preview to stay synchronized with the editor without re
 
 ## 🎯 Project Goals
 
-The main purpose of Survey Lab is to demonstrate how a modern React application can handle:
+The main purpose of CSAT is to demonstrate how a modern React application can handle:
 
-* Dynamic form generation
-* Nested state management
-* Reusable React components
-* Shared state between components
-* Real-time preview synchronization
-* Conditional UI rendering
-* Responsive design
-* User-friendly configuration interfaces
+- Dynamic form generation
+- Nested state management
+- Reusable React components
+- Shared state between components
+- Real-time preview synchronization
+- Conditional UI rendering
+- Responsive design
+- User-friendly configuration interfaces
 
 The project intentionally focuses on the frontend experience and does not require a complex backend, authentication system, analytics dashboard, or payment functionality.
 
 ## 📱 Responsive Design
 
-Survey Lab is designed to work across different screen sizes.
+CSAT is designed to work across different screen sizes.
 
 ### Desktop
 
@@ -225,10 +225,10 @@ The editor and preview stack vertically to provide a comfortable mobile experien
 
 The application can be deployed using platforms such as:
 
-* Vercel
-* Netlify
-* Render
-* Firebase Hosting
+- Vercel
+- Netlify
+- Render
+- Firebase Hosting
 
 For deployment, create a production build using:
 
@@ -258,4 +258,4 @@ This project is intended for educational and portfolio purposes.
 
 ### 👨‍💻 Built with React + TypeScript
 
-**Survey Lab** — Build surveys, customize them, and see the result instantly.
+**CSAT** — Build surveys, customize them, and see the result instantly.

@@ -2,7 +2,6 @@ import { Section } from '../controls/Section';
 import { TextInput } from '../controls/TextInput';
 import { Toggle } from '../controls/Toggle';
 import { Select } from '../controls/Select';
-import { UploadControl } from '../controls/UploadControl';
 import type { ThankYouConfig } from '../../types';
 
 interface ThankYouCardProps {
@@ -48,15 +47,6 @@ export function ThankYouCard({ config, onToggle, onUpdate }: ThankYouCardProps) 
 
       {config.enabled && (
         <div className="space-y-3.5 sm:space-y-4">
-          <UploadControl
-            label="Media (optional)"
-            description="Optional image or Lottie animation. PNG, JPG, JPEG, GIF, Lottie."
-            value={config.mediaUrl}
-            mediaType={config.mediaType}
-            fileName={config.mediaName}
-            onChange={(url, type, fileName) => onUpdate({ mediaUrl: url, mediaType: type, mediaName: fileName ?? null })}
-          />
-
           <TextInput
             label="Title"
             value={config.title}
